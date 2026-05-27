@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社HTコネクション | HT Connection</title>
+    <meta name="description" content="くらしの固定費をやさしく見直す。光回線・電気・ガス・ウォーターサーバーの導入をトータルサポート。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #27272a; /* zinc-800 */
+            background-color: #fafaf9; /* stone-50 */
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .font-outfit { font-family: 'Outfit', sans-serif; }
+        .font-serif-jp { font-family: 'Noto Serif JP', serif; }
+
+        html { scroll-behavior: smooth; }
+
+        /* Handcrafted/Editorial styles */
+        .editorial-border {
+            border: 1px solid #e4e4e7; /* zinc-200 */
+        }
+        
+        .nav-link {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background: #27272a;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .section-title-en {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+            color: #71717a; /* zinc-500 */
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+        }
+    </style>
+</head>
+<body class="selection:bg-zinc-200 selection:text-zinc-900">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-stone-50/95 backdrop-blur-sm border-b border-zinc-200 py-5 transition-all duration-300" id="main-header">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div class="w-10 h-10 border border-zinc-800 flex items-center justify-center bg-zinc-900 group-hover:bg-white transition-colors duration-300">
+                    <span class="font-outfit font-bold text-lg text-white group-hover:text-zinc-900 transition-colors duration-300">HT</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-lg font-bold tracking-[0.1em] text-zinc-900 leading-none font-outfit uppercase">HT Connection</span>
+                    <span class="text-[9px] font-bold tracking-[0.2em] text-zinc-500 mt-1.5 uppercase">Innovative Infrastructure</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-12 text-sm font-medium tracking-wide">
+                <a href="index.html#top" class="nav-link text-zinc-600">TOP</a>
+                <a href="about.html" class="nav-link text-zinc-600">ABOUT</a>
+                <a href="index.html#services" class="nav-link text-zinc-600">SERVICES</a>
+                <a href="contact.html" class="nav-link text-zinc-600">CONTACT</a>
+            </nav>
+
+            <button class="md:hidden p-2 text-zinc-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="top" class="relative min-h-screen flex items-center pt-24 pb-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 pt-10">
+                    <div class="mb-6 flex items-center gap-4">
+                        <div class="w-12 h-[1px] bg-zinc-800"></div>
+                        <span class="text-xs font-bold tracking-widest text-zinc-800">株式会社HTコネクション</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif-jp font-bold leading-[1.3] mb-8 text-zinc-900">
+                        あなたの暮らしに寄り添う、<br>
+                        最適な選択肢を。
+                    </h1>
+                    <p class="text-lg text-zinc-600 mb-12 leading-[1.8] max-w-lg font-light">
+                        複雑でわかりにくいインフラ選びを、シンプルに。<br>
+                        お客様一人ひとりのライフスタイルに寄り添い、最適な選択をサポートします。
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#services" class="px-8 py-4 bg-zinc-900 text-white text-sm font-bold tracking-widest hover:bg-zinc-700 transition-colors text-center border border-zinc-900">
+                            取り扱いサービス
+                        </a>
+                        <a href="about.html" class="px-8 py-4 bg-transparent text-zinc-900 text-sm font-bold tracking-widest hover:bg-zinc-100 transition-colors text-center border border-zinc-300">
+                            私たちについて
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 h-[60vh] lg:h-[80vh] relative">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" alt="Office" class="w-full h-full object-cover grayscale-[20%] brightness-105 editorial-border">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="py-24 bg-white border-y border-zinc-200">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-end justify-between mb-16">
+                <div>
+                    <span class="section-title-en">Why Us</span>
+                    <h2 class="text-3xl font-serif-jp font-bold mt-4 text-zinc-900">選ばれる3つの理由</h2>
+                </div>
+                <div class="w-full md:w-auto h-[1px] bg-zinc-200 flex-grow ml-0 md:ml-12 mt-8 md:mt-0"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-stone-50 p-10 editorial-border card-hover">
+                    <div class="text-zinc-300 font-outfit text-5xl font-light mb-6">01</div>
+                    <h3 class="text-xl font-bold mb-4 leading-relaxed text-zinc-900 font-serif-jp">条件を整理して、<br>最適なプランだけをご提案</h3>
+                    <p class="text-zinc-600 leading-relaxed text-sm font-light">複雑な料金体系やプランを整理し、お客様のライフスタイルに最適な選択肢を絞り込んで提示します。</p>
+                </div>
+                <div class="bg-stone-50 p-10 editorial-border card-hover">
+                    <div class="text-zinc-300 font-outfit text-5xl font-light mb-6">02</div>
+                    <h3 class="text-xl font-bold mb-4 leading-relaxed text-zinc-900 font-serif-jp">複数サービスの見直しも<br>ワンストップで完結</h3>
+                    <p class="text-zinc-600 leading-relaxed text-sm font-light">通信、インフラなど、バラバラな契約を一括で管理・見直しすることが可能です。</p>
+                </div>
+                <div class="bg-stone-50 p-10 editorial-border card-hover">
+                    <div class="text-zinc-300 font-outfit text-5xl font-light mb-6">03</div>
+                    <h3 class="text-xl font-bold mb-4 leading-relaxed text-zinc-900 font-serif-jp">導入後も専用窓口で<br>安心の継続サポート</h3>
+                    <p class="text-zinc-600 leading-relaxed text-sm font-light">契約して終わりではなく、導入後の不明点やトラブル時も自社の専門スタッフが丁寧に対応いたします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-stone-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="section-title-en">Services</span>
+                <h2 class="text-3xl font-serif-jp font-bold mt-4 text-zinc-900">事業紹介</h2>
+                <p class="text-zinc-500 mt-6 max-w-lg mx-auto text-sm font-light">
+                    暮らしに欠かせないインフラからビジネスの効率化まで、実直に、誠実にサービスを提供しています。
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-10 editorial-border card-hover flex flex-col h-full">
+                    <div class="mb-6 pb-6 border-b border-zinc-100 flex items-center justify-between">
+                        <h3 class="text-xl font-bold text-zinc-900 font-serif-jp">光回線・Wi-Fi</h3>
+                        <span class="text-zinc-400 font-outfit text-xs uppercase tracking-widest">Comm.</span>
+                    </div>
+                    <p class="text-zinc-600 leading-relaxed text-sm font-light flex-grow">利用環境に合わせて、速度・料金・サポートを踏まえた最適プランをご案内します。</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-10 editorial-border card-hover flex flex-col h-full">
+                    <div class="mb-6 pb-6 border-b border-zinc-100 flex items-center justify-between">
+                        <h3 class="text-xl font-bold text-zinc-900 font-serif-jp">電気・ガス</h3>
+                        <span class="text-zinc-400 font-outfit text-xs uppercase tracking-widest">Energy</span>
+                    </div>
+                    <p class="text-zinc-600 leading-relaxed text-sm font-light flex-grow">世帯構成や使用量の傾向に合わせ、無理のない切替・見直しをサポートします。</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-10 editorial-border card-hover flex flex-col h-full">
+                    <div class="mb-6 pb-6 border-b border-zinc-100 flex items-center justify-between">
+                        <h3 class="text-xl font-bold text-zinc-900 font-serif-jp">ウォーターサーバー</h3>
+                        <span class="text-zinc-400 font-outfit text-xs uppercase tracking-widest">Life</span>
+                    </div>
+                    <p class="text-zinc-600 leading-relaxed text-sm font-light flex-grow">設置性・コスト・配送ペースなど、はじめての方も選びやすい基準でご案内します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 text-zinc-300 pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <a href="index.html" class="flex items-center gap-4 mb-8">
+                        <div class="w-10 h-10 border border-zinc-500 flex items-center justify-center bg-transparent">
+                            <span class="font-outfit font-bold text-lg text-white">HT</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-lg font-bold tracking-[0.1em] text-white leading-none font-outfit uppercase">HT Connection</span>
+                            <span class="text-[9px] font-bold tracking-[0.2em] text-zinc-500 mt-1.5 uppercase">Company Profile</span>
+                        </div>
+                    </a>
+                    <p class="text-zinc-400 mb-8 leading-relaxed max-w-sm text-sm font-light">
+                        株式会社HTコネクションは、次世代のライフスタイルを創造するパートナーとして、最適なサービスを提供し続けます。
+                    </p>
+                    <div class="text-zinc-400 text-sm font-light leading-relaxed border-l-2 border-zinc-700 pl-4">
+                        【本社】〒150-0031 東京都渋谷区桜丘町15-14 フジビル40 7階 2<br>
+                        【支社】〒150-0013 東京都渋谷区恵比寿1-5-9 SG恵比寿ビル 5F
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif-jp font-bold mb-6 text-white tracking-widest">メニュー</h4>
+                    <ul class="space-y-3 text-sm font-light">
+                        <li><a href="index.html#top" class="hover:text-white transition-colors">TOP</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">企業情報</a></li>
+                        <li><a href="index.html#services" class="hover:text-white transition-colors">事業紹介</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">お問い合わせ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif-jp font-bold mb-6 text-white tracking-widest">各種方針</h4>
+                    <ul class="space-y-3 text-sm font-light">
+                        <li><a href="privacy.html" class="hover:text-white transition-colors">プライバシーポリシー</a></li>
+                        <li><a href="site-policy.html" class="hover:text-white transition-colors">サイトポリシー</a></li>
+                        <li><a href="security.html" class="hover:text-white transition-colors">情報セキュリティ方針</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-zinc-500 text-[10px] font-outfit uppercase tracking-widest">&copy; 2026 HT Connection Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-sm');
+                header.classList.replace('py-5', 'py-3');
+            } else {
+                header.classList.remove('shadow-sm');
+                header.classList.replace('py-3', 'py-5');
+            }
+        });
+    </script>
+</body>
+</html>

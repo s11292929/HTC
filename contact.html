@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | 株式会社HTコネクション</title>
+    <meta name="description" content="株式会社HTコネクションへのお問い合わせはこちらから。光回線・電気・ガス・ウォーターサーバー等の導入に関するご相談を承ります。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.4);
+        }
+
+        body {
+            font-family: 'Noto Sans JP', 'Outfit', sans-serif;
+            color: #1e293b;
+            overflow-x: hidden;
+            background-color: #f8fafc;
+        }
+
+        .font-outfit { font-family: 'Outfit', sans-serif; }
+
+        /* Glassmorphism */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+        }
+
+        /* Nav Hover */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: var(--primary-gradient);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Custom Input Styling */
+        .form-input {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 1rem;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        .form-input:focus {
+            background: white;
+            border-color: #475569;
+            box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+        }
+
+        .section-title-en {
+            font-size: 0.875rem;
+            letter-spacing: 0.2em;
+            color: #475569;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* Blob Background */
+        .blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: var(--primary-gradient);
+            filter: blur(80px);
+            opacity: 0.1;
+            z-index: -1;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="pt-24">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-slate-200/50 py-4 transition-all duration-300">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div class="relative w-11 h-11 bg-gradient-to-tr from-slate-700 to-slate-400 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+                    <svg viewBox="0 0 24 24" class="w-7 h-7 text-white fill-none stroke-current" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 17V7l10 10V7" />
+                        <path d="M7 17l10-10" class="opacity-30" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold tracking-[0.05em] text-slate-900 leading-none font-outfit">HT CONNECTION</span>
+                    <span class="text-[9px] font-bold tracking-[0.3em] text-slate-500 mt-1 uppercase">Innovative Infrastructure</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-10 text-sm font-bold">
+                <a href="index.html#top" class="nav-link text-slate-600 hover:text-slate-700 transition">TOP</a>
+                <a href="about.html" class="nav-link text-slate-600 hover:text-slate-700 transition">ABOUT</a>
+                <a href="index.html#services" class="nav-link text-slate-600 hover:text-slate-700 transition">SERVICES</a>
+                <a href="contact.html" class="nav-link text-slate-700 transition">CONTACT</a>
+            </nav>
+
+            <button class="md:hidden p-2 text-slate-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="relative py-20 overflow-hidden">
+        <div class="blob -top-24 -left-24"></div>
+        <div class="blob bottom-0 -right-48"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="section-title-en">Contact</span>
+                    <h1 class="text-4xl font-bold mt-4 mb-6">お問い合わせ</h1>
+                    <div class="w-12 h-1 bg-slate-700 mx-auto rounded-full"></div>
+                    <p class="text-slate-500 mt-8 leading-relaxed">
+                        弊社のサービスに関するご質問やご相談など、<br class="hidden sm:block">
+                        お気軽にお問い合わせください。
+                    </p>
+                </div>
+
+                <div class="glass-card rounded-[40px] p-8 md:p-12 shadow-2xl shadow-blue-100/50">
+                    <form action="#" method="POST" class="space-y-8">
+                        <!-- ご用件 -->
+                        <div class="space-y-3">
+                            <label for="subject" class="text-sm font-bold text-slate-700 ml-1">ご用件 <span class="text-red-500 ml-1">※</span></label>
+                            <select id="subject" name="subject" required class="form-input appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23475569%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E')] bg-[length:1.25rem] bg-[right_1.25rem_center] bg-no-repeat">
+                                <option value="" disabled selected>選択してください</option>
+                                <option value="service">サービスに関するお問い合わせ</option>
+                                <option value="recruitment">採用について</option>
+                                <option value="partnership">提携・協業について</option>
+                                <option value="other">その他</option>
+                            </select>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <!-- お名前 -->
+                            <div class="space-y-3">
+                                <label for="name" class="text-sm font-bold text-slate-700 ml-1">お名前 <span class="text-red-500 ml-1">※</span></label>
+                                <input type="text" id="name" name="name" required placeholder="山田 太郎" class="form-input">
+                            </div>
+                            <!-- フリガナ -->
+                            <div class="space-y-3">
+                                <label for="kana" class="text-sm font-bold text-slate-700 ml-1">フリガナ <span class="text-red-500 ml-1">※</span></label>
+                                <input type="text" id="kana" name="kana" required placeholder="ヤマダ タロウ" class="form-input">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <!-- Mail -->
+                            <div class="space-y-3">
+                                <label for="email" class="text-sm font-bold text-slate-700 ml-1">Mail <span class="text-red-500 ml-1">※</span></label>
+                                <input type="email" id="email" name="email" required placeholder="example@nmc.inc" class="form-input">
+                            </div>
+                            <!-- 電話番号 -->
+                            <div class="space-y-3">
+                                <label for="tel" class="text-sm font-bold text-slate-700 ml-1">電話番号</label>
+                                <input type="tel" id="tel" name="tel" placeholder="03-0000-0000" class="form-input">
+                            </div>
+                        </div>
+
+                        <!-- お問い合わせ内容 -->
+                        <div class="space-y-3">
+                            <label for="message" class="text-sm font-bold text-slate-700 ml-1">お問い合わせ内容 <span class="text-red-500 ml-1">※</span></label>
+                            <textarea id="message" name="message" required rows="6" placeholder="お問い合わせ内容をご記入ください。" class="form-input resize-none"></textarea>
+                        </div>
+
+                        <!-- プライバシーポリシー同意 -->
+                        <div class="flex items-start gap-3 py-4">
+                            <input type="checkbox" id="privacy" name="privacy" required class="mt-1 w-5 h-5 rounded border-slate-300 text-slate-700 focus:ring-blue-500 transition cursor-pointer">
+                            <label for="privacy" class="text-sm text-slate-500 leading-relaxed cursor-pointer">
+                                <a href="privacy.html" class="text-slate-700 underline hover:no-underline">プライバシーポリシー</a>に同意する
+                            </label>
+                        </div>
+
+                        <!-- 送信ボタン -->
+                        <div class="pt-4">
+                            <button type="submit" class="w-full group relative px-10 py-5 bg-gradient-to-r from-slate-800 to-slate-500 text-white rounded-2xl font-bold text-lg shadow-xl shadow-slate-200 hover:scale-[1.02] active:scale-95 transition-all duration-300 overflow-hidden flex items-center justify-center gap-3">
+                                <span class="relative z-10">送信する</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                                <div class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-24 pb-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-16 mb-20">
+                <div class="col-span-2">
+                    <a href="index.html" class="flex items-center gap-4 mb-8 group">
+                        <div class="relative w-14 h-14 bg-gradient-to-tr from-slate-700 to-slate-400 rounded-2xl flex items-center justify-center shadow-xl">
+                            <svg viewBox="0 0 24 24" class="w-9 h-9 text-white fill-none stroke-current" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 17V7l10 10V7" />
+                            </svg>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-bold tracking-[0.05em] text-white leading-none font-outfit">HT CONNECTION</span>
+                            <span class="text-[10px] font-bold tracking-[0.4em] text-slate-600 mt-2 uppercase">Company Profile</span>
+                        </div>
+                    </a>
+                    <p class="text-slate-400 mb-6 leading-relaxed max-w-sm">
+                        株式会社 HTコネクションは、次世代のライフスタイルを創造するパートナーとして、最適なサービスを提供し続けます。
+                    </p>
+                    <div class="text-slate-500 text-sm">
+                        【本社】〒150-0031 東京都渋谷区桜丘町15-14 フジビル40 7階 2<br>【支社】〒150-0013 東京都渋谷区恵比寿1-5-9 SG恵比寿ビル 5F
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-8 text-lg">Menu</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li><a href="index.html#top" class="hover:text-slate-600 transition">TOP</a></li>
+                        <li><a href="about.html" class="hover:text-slate-600 transition">企業情報</a></li>
+                        <li><a href="index.html#services" class="hover:text-slate-600 transition">事業紹介</a></li>
+                        <li><a href="contact.html" class="hover:text-slate-600 transition">お問い合わせ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-8 text-lg">Policies</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li><a href="privacy.html" class="hover:text-slate-600 transition">プライバシーポリシー</a></li>
+                        <li><a href="site-policy.html" class="hover:text-slate-600 transition">サイトポリシー</a></li>
+                        <li><a href="security.html" class="hover:text-slate-600 transition">情報セキュリティ方針</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-xs font-outfit uppercase tracking-widest">&copy; 2026 HT Connection Inc. All Rights Reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.21 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.332 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.332-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.435.066-2.853.388-3.991 1.527-1.139 1.138-1.461 2.556-1.527 3.991-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.066 1.435.388 2.853 1.527 3.991 1.138 1.139 2.556 1.461 3.991 1.527 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.435-.066 2.853-.388 3.991-1.527 1.139-1.138 1.461-2.556 1.527-3.991.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.066-1.435-.388-2.853-1.527-3.991-1.138-1.139-2.556-1.461-3.991-1.527-1.28-.058-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-xl', 'bg-white/90');
+                header.style.padding = '0.5rem 0';
+            } else {
+                header.classList.remove('shadow-xl', 'bg-white/90');
+                header.style.padding = '1rem 0';
+            }
+        });
+    </script>
+</body>
+</html>
+
+
